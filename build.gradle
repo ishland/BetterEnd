@@ -144,21 +144,21 @@ task release(dependsOn: [remapJar, sourcesJar, javadocJar]) {
 }
 
 // configure the maven publication
-//publishing {
-//	publications {
-//		mavenJava(MavenPublication) {
-//			artifact(remapJar) {
-//				builtBy remapJar
-//			}
-//			artifact(sourcesJar) {
-//				builtBy remapSourcesJar
-//			}
-//		}
-//	}
-//
-//	// select the repositories you want to publish to
-//	repositories {
-//		// uncomment to publish to the local maven
-//		// mavenLocal()
-//	}
-//}
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifact(remapJar) {
+				builtBy remapJar
+			}
+			artifact(sourcesJar) {
+				builtBy remapSourcesJar
+			}
+		}
+	}
+
+	// select the repositories you want to publish to
+	repositories {
+		// uncomment to publish to the local maven
+		// mavenLocal()
+	}
+}
