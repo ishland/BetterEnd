@@ -155,7 +155,7 @@ public class PedestalBlock extends BaseBlockNotFull implements EntityBlock {
 				if (blockEntity instanceof InfusionPedestalEntity) {
 					InfusionPedestalEntity pedestal = (InfusionPedestalEntity) blockEntity;
 					if (pedestal.hasRitual()) {
-						pedestal.getRitual().markDirty();
+						pedestal.getRitual().markDirty1();
 					}
 				}
 				break;
